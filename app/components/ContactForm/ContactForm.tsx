@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { Button } from "../Button/Button";
 // import emailjs from 'emailjs-com';
 
 export function ContactForm() {
@@ -28,7 +29,7 @@ export function ContactForm() {
 	// }
 
 	return (
-		<form>
+		<form className="w-full max-w-[500px] mx-auto">
 			<label>
 				Name <span className="text-red-500">*</span>
 				<div>
@@ -36,7 +37,7 @@ export function ContactForm() {
 						required
 						type="text"
 						name="from_name"
-						className="border-2 rounded w-[75%] mb-5"
+						className="border-2 rounded w-full mb-5 pl-2 focus:outline-yellow-400"
 						value={nameText ? nameText : ""}
 						onChange={(e) => setNameText(e.target.value)}
 					/>
@@ -50,7 +51,7 @@ export function ContactForm() {
 						required
 						type="email"
 						name="from_email"
-						className="border-2 rounded w-[75%] mb-5"
+						className="border-2 rounded w-full mb-5 pl-2 focus:outline-yellow-400	"
 						value={emailText ? emailText : ""}
 						onChange={(e) => setEmailText(e.target.value)}
 					/>
@@ -63,17 +64,15 @@ export function ContactForm() {
 					<textarea
 						required
 						name="message"
-						className="border-2 rounded w-[75%] h-[100px] mb-5"
+						className="border-2 rounded w-full h-[100px] mb-5 pl-2 focus:outline-yellow-400	"
 						value={messageText ? messageText : ""}
 						onChange={(e) => setMessageText(e.target.value)}
 					/>
 				</div>
 			</label>
 
-			<div className="w-[75%] flex justify-end">
-				<button className="border bg-gray-300 px-3 py-1 rounded-md">
-					Send!
-				</button>
+			<div className="w-full flex justify-end">
+				<Button color="black" text="Send!" path="/home" />
 			</div>
 		</form>
 	);

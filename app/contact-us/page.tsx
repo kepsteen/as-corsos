@@ -13,18 +13,20 @@ export default async function Page() {
 				tabletHeight={325}
 				laptopHeight={600}
 			>
-				<div className="bg-[#3333337c] h-full pt-5 pl-3 laptop:pl-[3rem] laptop:pt-[4rem]">
-					<h1 className="font-heading text-white text-[3rem] laptop:text-[4rem]">
+				<div className="bg-[#3333337c] h-full pl-3 laptop:pl-[3rem] laptop:pt-[4rem] grid place-content-center">
+					<h1 className="font-body text-white text-6xl laptop:text-[4rem]">
 						Contact Us
 					</h1>
 				</div>
 			</HeroBanner>
-			<div className="font-body space-y-3 mx-10">
-				<h1 className="font-heading text-[3rem] mt-10">Let&apos;s Chat!</h1>
+			<div className="font-body space-y-3 mx-10 mb-10">
+				<h1 className="font-heading text-[3rem] mt-10 text-center">
+					Send Us a Message
+				</h1>
 				<ContactForm />
 			</div>
 
-			<HeroBanner
+			{/* <HeroBanner
 				image="corso-2"
 				imageFill="contain"
 				imagePos="right"
@@ -45,7 +47,7 @@ export default async function Page() {
 					</p>
 					<Button color="black" text="Learn more" path="/home" />
 				</div>
-			</HeroBanner>
+			</HeroBanner> */}
 
 			<Footer />
 		</>

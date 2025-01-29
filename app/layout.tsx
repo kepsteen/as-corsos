@@ -1,13 +1,8 @@
 import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import { draftMode } from "next/headers";
-
-import DraftModeToast from "@/app/components/DraftModeToast";
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import { Navbar } from "./components/Navbar/Navbar";
 
 const inter = Inter({

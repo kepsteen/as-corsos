@@ -12,8 +12,8 @@ export default async function Page() {
 				tabletHeight={325}
 				laptopHeight={600}
 			>
-				<div className="bg-[#3333337c] h-full pt-5 pl-3 laptop:pl-[3rem] laptop:pt-[4rem]">
-					<h1 className="font-heading text-white text-[3rem] laptop:text-[4rem]">
+				<div className="bg-[#3333337c] h-full pl-3 laptop:pl-[3rem] laptop:pt-[4rem] grid place-content-center">
+					<h1 className="font-body text-white text-6xl laptop:text-[4rem]">
 						About Us
 					</h1>
 				</div>
@@ -67,7 +67,7 @@ export default async function Page() {
 						Id odio torquent dis tortor eros euismod. Ornare pellentesque
 						himenaeos quisque facilisi tincidunt.
 					</p>
-					<Button color="black" text="Learn more" path="/home" />
+					<Button color="black" text="Contact Us" path="/contact-us" />
 				</div>
 			</HeroBanner>
 

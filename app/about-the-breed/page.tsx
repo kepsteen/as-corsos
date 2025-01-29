@@ -13,9 +13,9 @@ export default async function Page() {
 				tabletHeight={325}
 				laptopHeight={600}
 			>
-				<div className="bg-[#3333337c] h-full pt-5 pl-3 laptop:pl-[3rem] laptop:pt-[4rem]">
-					<h1 className="font-heading text-white text-[3rem] laptop:text-[4rem]">
-						About the <br /> Breed
+				<div className="bg-[#3333337c] h-full pl-3 laptop:pl-[3rem] laptop:pt-[4rem] grid place-content-center">
+					<h1 className="font-heading text-white text-6xl laptop:text-[4rem]">
+						About the Breed
 					</h1>
 				</div>
 			</HeroBanner>

@@ -30,10 +30,11 @@ export function Navbar() {
 	}
 
 	let navbarClassName =
-		"p-2 fixed w-full min-w-[375px] h-[60px] flex items-center justify-between text-white transition-[background-color] duration-150 ease-in ";
+		"p-4 fixed w-full min-w-[375px] flex items-center justify-between text-white transition-[background-color] duration-150 ease-in ";
 	navbarClassName += scrollPosition === 0 ? "bg-[#333]" : "bg-[#333333a0]";
 
-	let dropdownClassName = "fixed top-[100px] w-full bg-white laptop:hidden ";
+	let dropdownClassName =
+		"fixed top-[60px] w-full bg-white laptop:hidden shadow-md ";
 	dropdownClassName += menuIsOpen ? "block" : "hidden";
 
 	return (
@@ -42,7 +43,10 @@ export function Navbar() {
 			<div className={navbarClassName}>
 				{/* Title */}
 				<div>
-					<Link href="/home" className="text-lg sm:ml-10 font-heading">
+					<Link
+						href="/home"
+						className="text-lg sm:text-2xl md:text-4xl sm:ml-10 font-heading"
+					>
 						Alpha Sierra Corsos
 					</Link>
 				</div>
@@ -57,7 +61,7 @@ export function Navbar() {
 
 				{/* Menu links for desktop */}
 				<nav className="hidden md:block basis-1/2 font-body pt-2 mr-10 ">
-					<ul className="flex flex-wrap justify-center space-x-5 [&>*]:mb-2 [&>*]:cursor-pointer text-base">
+					<ul className="flex flex-wrap justify-center space-x-5 [&>*]:mb-2 [&>*]:cursor-pointer text-lg">
 						<NavLinks type="yellow" />
 					</ul>
 				</nav>
