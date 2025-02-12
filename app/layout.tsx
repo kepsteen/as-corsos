@@ -2,7 +2,6 @@ import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter, League_Spartan } from "next/font/google";
-import { draftMode } from "next/headers";
 import { Navbar } from "./components/Navbar/Navbar";
 
 const inter = Inter({
@@ -22,8 +21,6 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const { isEnabled: isDraftMode } = await draftMode();
-
 	return (
 		<html lang="en" className={`${spartan.variable} bg-white text-black`}>
 			<body className="min-w-[375px]">
