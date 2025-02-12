@@ -30,7 +30,7 @@ export function Navbar() {
 	}
 
 	let navbarClassName =
-		"p-4 fixed w-full min-w-[375px] flex items-center justify-between text-white transition-[background-color] duration-150 ease-in ";
+		"p-4 fixed z-10 w-full min-w-[375px] flex items-center justify-between text-white transition-[background-color] duration-150 ease-in ";
 	navbarClassName += scrollPosition === 0 ? "bg-[#333]" : "bg-[#333333a0]";
 
 	let dropdownClassName =
