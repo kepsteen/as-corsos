@@ -1,26 +1,10 @@
 import Image from "next/image";
 import { HeroBanner } from "../components/HeroBanner/HeroBanner";
 import { Footer } from "../components/Footer/Footer";
-
-type Puppy = {
-	id: string;
-	name: string;
-	available_date: string;
-	gender: string;
-	image_url: string;
-};
+import { getPuppies } from "../lib/api";
 
 export default async function AvailablePage() {
-	let puppieResponse = await fetch(
-		`${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/puppies?select=*`,
-		{
-			headers: new Headers({
-				apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
-				Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-			}),
-		}
-	);
-	const puppies = (await puppieResponse.json()) as Puppy[];
+	const puppies = await getPuppies();
 	console.log(puppies);
 
 	return (
